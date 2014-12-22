@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>Happy Holidays!</title>
     <link rel="stylesheet" href="css/foundation.css" />
 	<link rel="stylesheet" href="css/card.css" />
     <script src="js/vendor/modernizr.js"></script>
@@ -16,9 +16,17 @@
   <body>
     <main>
       <section id="slide-1" class="homeSlide">
-        <div id="bg" class="bcg">
-          <div id="repeat" class="hsContainer">
-            <div class="hsContent">
+        <div id="bg" class="bcg" 
+          data-center="background-position: 50% 0px;"
+          data-top-bottom="background-position: 50% -100px;"
+          data-anchor-target="#slide-1"
+        >
+          <div class="hsContainer">
+            <div id="repeat" class="hsContent"
+                data-center="bottom: 200px; opacity: 1"
+                data-top="bottom: 1200px; opacity: 0"
+                data-anchor-target="#slide-1 #last"
+            >
               <div class="row">
                 <div class="large-12 columns">
                   <h1>Happy holidays!</h1>
@@ -51,7 +59,7 @@
                   <p>
                     ldkla
                   </p>
-                  <p>
+                  <p id="last">
                     ldkla
                   </p>
                 </div>
