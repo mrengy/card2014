@@ -1,6 +1,17 @@
 body{
-	background-image: url('../img/cat-fish-tesselation.png');
-	/* background-repeat:repeat; */
+	/* background-image: url('../img/cat-fish-tesselation.png'); */
+
+	/* The old syntax, deprecated and prefixed, for old browsers */
+	background:-prefix-linear-gradient(
+			top, rgba(255,255,255,1), rgba(255,255,255,0), rgba(255,255,255,1)
+		), 
+	url('../img/cat-fish-tesselation.png');
+	
+	/* The new syntax needed by standard-compliant browsers (Opera 12.1, IE 10, Firefox 16, Chrome 26, Safari 6.1), without prefix */
+	background:linear-gradient(
+			to bottom, rgba(255,255,255,1), rgba(255,255,255,0), rgba(255,255,255,1)
+		), 
+	url('../img/cat-fish-tesselation.png');
 }
 
 #hand{
