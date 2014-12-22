@@ -1,4 +1,4 @@
-body{
+#bg{
 	/* background-image: url('../img/cat-fish-tesselation.png'); */
 
 	/* The old syntax, deprecated and prefixed, for old browsers */
@@ -12,6 +12,7 @@ body{
 			to bottom, rgba(255,255,255,1), rgba(255,255,255,0), rgba(255,255,255,1)
 		), 
 	url('../img/cat-fish-tesselation.png');
+	height:100%;
 }
 
 #hand{
@@ -19,6 +20,7 @@ position:fixed;
 bottom:0px;
 margin: 0 0 0 -50%;
 left:50%;
+z-index:99;
 }
 
 @media(min-width: 830px) {
