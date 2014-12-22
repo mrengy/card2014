@@ -1,3 +1,8 @@
+body{
+	background-image: url('../img/cat-fish-tesselation.png');
+	/* background-repeat:repeat; */
+}
+
 #hand{
 position:fixed;
 bottom:0px;
