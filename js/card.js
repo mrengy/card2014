@@ -1,10 +1,4 @@
-// Init Skrollr
-var s = skrollr.init({
-	forceHeight: false
-});
- 
-// Refresh Skrollr after resizing our sections
-s.refresh($('.homeSlide'));
+
 
 $( document ).ready(function() {
 	//polyhedron dimensions
@@ -25,69 +19,27 @@ $( document ).ready(function() {
 		return '<p id="'+shape+'" style="margin-left: '+margin+'%;"> <img src="img/'+shape+'.png" width="'+width+'" /> </p>';
 	}
 
-	function insertShapes(){
-		if(getRandomInt(0,1) == 1){
-		insertion += drawShape('polyhedron', getRandomInt(0,100), getRandomInt(0,100)/100*pw);
-	}
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('triangle', getRandomInt(0,100), getRandomInt(0,100)/100*tw);
-	}
-
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('polyhedron', getRandomInt(0,100), getRandomInt(0,100)/100*pw);
-	}
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('triangle', getRandomInt(0,100), getRandomInt(0,100)/100*tw);
-	}
-	
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('polyhedron', getRandomInt(0,100), getRandomInt(0,100)/100*pw);
-	}
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('triangle', getRandomInt(0,100), getRandomInt(0,100)/100*tw);
-	}
-	
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('polyhedron', getRandomInt(0,100), getRandomInt(0,100)/100*pw);
-	}
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('triangle', getRandomInt(0,100), getRandomInt(0,100)/100*tw);
+	function insertShapes(number){
+		for(i = 0; i<number; i++){
+			if(getRandomInt(0,1) == 1){
+				insertion += drawShape('polyhedron', getRandomInt(0,100), getRandomInt(0,100)/100*pw);
+			} else{
+				insertion += drawShape('triangle', getRandomInt(0,100), getRandomInt(0,100)/100*tw);
+			}
+		}
+		$('#shapes div').html(insertion);
+		insertion = '';
 	}
 
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('polyhedron', getRandomInt(0,100), getRandomInt(0,100)/100*pw);
-	}
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('triangle', getRandomInt(0,100), getRandomInt(0,100)/100*tw);
-	}
+	insertShapes(8);
 
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('polyhedron', getRandomInt(0,100), getRandomInt(0,100)/100*pw);
-	}
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('triangle', getRandomInt(0,100), getRandomInt(0,100)/100*tw);
-	}
-
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('polyhedron', getRandomInt(0,100), getRandomInt(0,100)/100*pw);
-	}
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('triangle', getRandomInt(0,100), getRandomInt(0,100)/100*tw);
-	}
-
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('polyhedron', getRandomInt(0,100), getRandomInt(0,100)/100*pw);
-	}
-	if(getRandomInt(0,1) == 1){
-		insertion += drawShape('triangle', getRandomInt(0,100), getRandomInt(0,100)/100*tw);
-	}
-
-	$('#shapes div').html(insertion);
-
-	insertion = '';
-	}
-
-	insertShapes();
+	// Init Skrollr
+	var s = skrollr.init({
+		forceHeight: false
+	});
+ 
+	// Refresh Skrollr after resizing our sections
+	s.refresh($('.homeSlide'));
 	
 /*
   <p id="polyhedron" style="margin-left: 20%;">
