@@ -1,5 +1,3 @@
-
-
 $( document ).ready(function() {
 	//polyhedron dimensions
 	var pw = 200;
@@ -32,19 +30,6 @@ $( document ).ready(function() {
 
 		//resets insertion string
 		insertion = '';
-	}
-
-	function generateShapes(number){
-		//resets insertion string
-		insertion = '';
-
-		for(i = 0; i<number; i++){
-			if(getRandomInt(0,1) == 1){
-				insertion += drawShape('polyhedron', getRandomInt(0,100), getRandomInt(0,100)/100*pw);
-			} else{
-				insertion += drawShape('triangle', getRandomInt(0,100), getRandomInt(0,100)/100*tw);
-			}
-		}
 	}
 
 	//initial randomness

@@ -1,5 +1,4 @@
 #bg{
-	/* background-image: url('../img/cat-fish-tesselation.png'); */
 	background:	url('../img/cat-fish-tesselation.png');
 	
 	height:100%;
@@ -28,10 +27,3 @@ visibility:hidden;
 		/* set left margin to - 50% of image width */
 	}
 }
-
-/*
-#polyhedron img{
-	margin-left:90%;
-	width:50px;
-}
-*/
