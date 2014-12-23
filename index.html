@@ -55,8 +55,13 @@
         <img src="img/hand.png" />
       </div>
     </div>
-    <script src="js/vendor/skrollr.js"></script>
-    <script src="js/card.js"></script>
+    <script>
+      Modernizr.load({
+        test: Modernizr.touch,
+        yep: 'js/card.js',
+        nope: ['js/vendor/skrollr.js', 'js/card.js']
+      });
+    </script>
     <script src="js/foundation.min.js"></script>
     <script>
       $(document).foundation();

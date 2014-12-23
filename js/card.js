@@ -37,6 +37,12 @@ $( document ).ready(function() {
 
 
 	//parallax scrolling
+		/*
+		if( $('html:not(.touch)'){
+
+		})
+		*/
+		
 		// Init Skrollr
 		var s = skrollr.init({
 			forceHeight: false
