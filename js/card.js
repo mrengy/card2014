@@ -48,7 +48,7 @@ $( document ).ready(function() {
 	$(window).scroll(function() {
    		if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
 			//add repeated section
-			$('.repeat').parent().append(repeater);
+			$('.repeat:last-of-type').parent().append(repeater);
 			insertShapes(8);
        		
        		// Refresh Skrollr after resizing our sections
