@@ -52,7 +52,7 @@ $( document ).ready(function() {
 		
 
 	$(window).scroll(function() {
-   		if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+   		if($(window).scrollTop() + $(window).height() >= $(document).height() ) {
 			//add repeated section
 			$('.repeat:last-of-type').parent().append(repeater);
 			insertShapes(8);
