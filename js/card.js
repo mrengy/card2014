@@ -39,7 +39,7 @@ $( document ).ready(function() {
 	//parallax scrolling
 		
 		//only if touch events are NOT detected
-		if( $('html:not(.touch)') ){
+		if (!Modernizr.touch) {  
 			// Init Skrollr
 			var s = skrollr.init({
 				forceHeight: false
@@ -54,12 +54,12 @@ $( document ).ready(function() {
 	$(window).scroll(function() {
    		if($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
 			//add repeated section
-			alert('end reached');
+			//alert('end reached');
 			$('.repeat:last-of-type').parent().append(repeater);
 			insertShapes(8);
        		
        		//only if touch events are NOT detected
-			if( $('html:not(.touch)') ){
+			if (!Modernizr.touch) {  
 	       		// Refresh Skrollr after resizing our sections
 				s.refresh($('.homeSlide'));
 			}
