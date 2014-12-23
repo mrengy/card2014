@@ -10,6 +10,7 @@ $( document ).ready(function() {
 	var th = 166;
 	
 	var insertion = '';
+	var repeater = $('#repeat').parent().html();
 
 	function getRandomInt (min, max) {
 	    return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -27,12 +28,31 @@ $( document ).ready(function() {
 				insertion += drawShape('triangle', getRandomInt(0,100), getRandomInt(0,100)/100*tw);
 			}
 		}
-		$('#shapes div').html(insertion);
-		insertion = '';
+		$('#shapes:last div').html(insertion);
 	}
 
+	function generateShapes(number){
+		//resets insertion string
+		insertion = '';
+
+		for(i = 0; i<number; i++){
+			if(getRandomInt(0,1) == 1){
+				insertion += drawShape('polyhedron', getRandomInt(0,100), getRandomInt(0,100)/100*pw);
+			} else{
+				insertion += drawShape('triangle', getRandomInt(0,100), getRandomInt(0,100)/100*tw);
+			}
+		}
+	}
+
+	console.log(repeater);
+
+	//initial randomness
 	insertShapes(8);
 
+
+
+
+//parallax scrolling
 	// Init Skrollr
 	var s = skrollr.init({
 		forceHeight: false
@@ -41,19 +61,6 @@ $( document ).ready(function() {
 	// Refresh Skrollr after resizing our sections
 	s.refresh($('.homeSlide'));
 	
-/*
-  <p id="polyhedron" style="margin-left: 20%;">
-    <img src="img/polyhedron.png" />
-  </p>
-  <p id="triangle">
-    <img src="img/triangle.png" />
-  </p>
-  <p id="credit">
-    inspired by 
-    <a href="http://en.wikipedia.org/wiki/M._C._Escher">
-      <img src="img/head.png" />
-    </a>
-  </p>
- */
+
 //end document ready	
 });
