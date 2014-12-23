@@ -37,19 +37,19 @@ $( document ).ready(function() {
 
 
 	//parallax scrolling
-		/*
-		if( $('html:not(.touch)'){
-
-		})
-		*/
 		
-		// Init Skrollr
-		var s = skrollr.init({
-			forceHeight: false
-		});
-	 
-		// Refresh Skrollr after resizing our sections
-		s.refresh($('.homeSlide'));
+		//only if touch events are NOT detected
+		if( $('html:not(.touch)') ){
+			// Init Skrollr
+			var s = skrollr.init({
+				forceHeight: false
+			});
+		 
+			// Refresh Skrollr after resizing our sections
+			s.refresh($('.homeSlide'));
+		}
+
+		
 
 	$(window).scroll(function() {
    		if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
@@ -57,8 +57,11 @@ $( document ).ready(function() {
 			$('.repeat:last-of-type').parent().append(repeater);
 			insertShapes(8);
        		
-       		// Refresh Skrollr after resizing our sections
-			s.refresh($('.homeSlide'));
+       		//only if touch events are NOT detected
+			if( $('html:not(.touch)') ){
+	       		// Refresh Skrollr after resizing our sections
+				s.refresh($('.homeSlide'));
+			}
 	   }
 	});
 
