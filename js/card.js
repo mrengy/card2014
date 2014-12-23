@@ -8,7 +8,7 @@ $( document ).ready(function() {
 	var th = 166;
 	
 	var insertion = '';
-	var repeater = $('#repeat').parent().html();
+	var repeater = $('.repeat').parent().html();
 
 	function getRandomInt (min, max) {
 	    return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -48,7 +48,7 @@ $( document ).ready(function() {
 	$(window).scroll(function() {
    		if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
 			//add repeated section
-			$('#repeat').parent().append(repeater);
+			$('.repeat').parent().append(repeater);
 			insertShapes(8);
        		
        		// Refresh Skrollr after resizing our sections
