@@ -54,6 +54,7 @@ $( document ).ready(function() {
 	$(window).scroll(function() {
    		if($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
 			//add repeated section
+			alert('end reached');
 			$('.repeat:last-of-type').parent().append(repeater);
 			insertShapes(8);
        		
