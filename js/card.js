@@ -28,7 +28,10 @@ $( document ).ready(function() {
 				insertion += drawShape('triangle', getRandomInt(0,100), getRandomInt(0,100)/100*tw);
 			}
 		}
-		$('#shapes:last div').html(insertion);
+		$('.shapes:last div').html(insertion);
+
+		//resets insertion string
+		insertion = '';
 	}
 
 	function generateShapes(number){
@@ -44,23 +47,22 @@ $( document ).ready(function() {
 		}
 	}
 
-	console.log(repeater);
-
 	//initial randomness
 	insertShapes(8);
 
 
-
-
-//parallax scrolling
-	// Init Skrollr
-	var s = skrollr.init({
-		forceHeight: false
-	});
- 
-	// Refresh Skrollr after resizing our sections
-	s.refresh($('.homeSlide'));
+	//parallax scrolling
+		// Init Skrollr
+		var s = skrollr.init({
+			forceHeight: false
+		});
+	 
+		// Refresh Skrollr after resizing our sections
+		s.refresh($('.homeSlide'));
 	
+	//add repeated section
+	$('#repeat').parent().append(repeater);
+	insertShapes(8);
 
 //end document ready	
 });
