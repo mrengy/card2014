@@ -59,10 +59,17 @@ $( document ).ready(function() {
 	 
 		// Refresh Skrollr after resizing our sections
 		s.refresh($('.homeSlide'));
-	
-	//add repeated section
-	$('#repeat').parent().append(repeater);
-	insertShapes(8);
+
+	$(window).scroll(function() {
+   		if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+			//add repeated section
+			$('#repeat').parent().append(repeater);
+			insertShapes(8);
+       		
+       		// Refresh Skrollr after resizing our sections
+			s.refresh($('.homeSlide'));
+	   }
+	});
 
 //end document ready	
 });
