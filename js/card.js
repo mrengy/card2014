@@ -54,8 +54,11 @@ $( document ).ready(function() {
 	$(window).scroll(function() {
    		if($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
 			//add repeated section
-			//alert('end reached');
 			$('.repeat:last-of-type').parent().append(repeater);
+
+			//record Google Analytics Event
+			ga('send', 'event', 'end', 'scroll', 'infinity', 1);
+
 			//insertShapes(8);
        		
        		//only if touch events are NOT detected
@@ -64,6 +67,10 @@ $( document ).ready(function() {
 				s.refresh($('.homeSlide'));
 			}
 	   }
+	});
+
+	$('a#hand-link').click(function(){
+		ga('send', 'event', 'link', 'click', 'hand', 1);
 	});
 
 //end document ready	
