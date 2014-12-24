@@ -18,10 +18,10 @@ z-index:99;
 	);
 }
 
-@media(min-width: 830px) {
+@media(min-width: 330px) {
 	/* set min-width to image width plus 30 px for margins */
 	#hand{
-		margin: 0 0 0 -400px;
+		margin: 0 0 0 -150px;
 		/* set left margin to - 50% of image width */
 	}
 }
