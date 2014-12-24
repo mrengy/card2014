@@ -33,7 +33,7 @@ $( document ).ready(function() {
 	}
 
 	//initial randomness
-	insertShapes(8);
+	//insertShapes(8);
 
 
 	//parallax scrolling
@@ -56,7 +56,7 @@ $( document ).ready(function() {
 			//add repeated section
 			//alert('end reached');
 			$('.repeat:last-of-type').parent().append(repeater);
-			insertShapes(8);
+			//insertShapes(8);
        		
        		//only if touch events are NOT detected
 			if (!Modernizr.touch) {  

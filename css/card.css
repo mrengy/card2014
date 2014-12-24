@@ -8,6 +8,14 @@ body{
 	height:100%;
 }
 
+.message{
+	margin-bottom:800px;
+}
+
+.credit{
+	margin-bottom:200px;
+}
+
 #hand{
 position:fixed;
 bottom:0px;
