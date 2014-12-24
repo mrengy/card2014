@@ -1,3 +1,7 @@
+body{
+	text-shadow: #ffffff 1px 1px, #ffffff 2px 2px, #ffffff 3px 3px, #ffffff 4px 4px, #ffffff 5px 5px, #ffffff 6px 6px, #ffffff 7px 7px, #ffffff 8px 8px, #ffffff 9px 9px, #ffffff 10px 10px, #ffffff 11px 11px, #cccccc 12px 12px, #ffffff -1px 1px, #ffffff -1px -1px, #ffffff -2px -2px, #ffffff 1px -1px;
+}
+
 #bg{
 	background:	url('../img/cat-fish-tesselation.png');
 	
