@@ -16,7 +16,7 @@ body{
 	margin-bottom:200px;
 }
 
-#hand{
+#hand, #house{
 position:fixed;
 bottom:0px;
 margin: 0 0 0 -50%;
@@ -34,6 +34,14 @@ z-index:99;
 	/* set min-width to image width plus 30 px for margins */
 	#hand{
 		margin: 0 0 0 -250px;
+		/* set left margin to - 50% of image width */
+	}
+}
+
+@media(min-width: 1153px) {
+	/* set min-width to image width plus 30 px for margins */
+	#house{
+		margin: 0 0 0 -561px;
 		/* set left margin to - 50% of image width */
 	}
 }
