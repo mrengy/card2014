@@ -38,10 +38,10 @@ z-index:99;
 	}
 }
 
-@media(min-width: 1153px) {
+@media(min-width: 970px) {
 	/* set min-width to image width plus 30 px for margins */
 	#house{
-		margin: 0 0 0 -561px;
+		margin: 0 0 0 -470px;
 		/* set left margin to - 50% of image width */
 	}
 }
